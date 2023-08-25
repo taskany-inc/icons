@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) for commit guidelines.
 
+## [1.1.2](https://github.com/taskany-inc/icons/compare/v1.1.1...v1.1.2) (2023-08-25)
+
+
+### Bug Fixes
+
+* baseIcon component ([7ad61cf](https://github.com/taskany-inc/icons/commit/7ad61cf7997dad086061b709ea69808d4abd4876))
+* baseIcon component ([e49e34c](https://github.com/taskany-inc/icons/commit/e49e34ce9867aeb849f08bfca292a8de4028c0b6))
+
 ## [1.1.1](https://github.com/taskany-inc/icons/compare/v1.1.0...v1.1.1) (2023-08-24)
 
 
