@@ -9,11 +9,11 @@
     "dist"
   ],
   "scripts": {
-    "clean": "rm -rf ./icons ./es index.d.ts index.js index.js.map",
+    "clean": "rm -rf ./dist",
     "cleanup": "rm -rf ./src/icons/*.ts ./src/icons/*.tsx",
     "build": "npm run clean && npm run generate:icons && npm run build:cjm && npm run build:esm && npm run build:types && npm run cleanup",
-    "build:cjm": "BABEL_ENV=cjs babel ./src/icons --out-dir ./dist --extensions .ts,.tsx",
-    "build:esm": "BABEL_ENV=esm babel ./src/icons --out-dir ./dist/es --extensions .ts,.tsx",
+    "build:cjm": "BABEL_ENV=cjs babel ./src --out-dir ./dist --extensions .ts,.tsx --ignore ./src/generate",
+    "build:esm": "BABEL_ENV=esm babel ./src --out-dir ./dist/es --extensions .ts,.tsx --ignore ./src/generate",
     "build:types": "tsc --emitDeclarationOnly",
     "prepublishOnly": "npm run build",
     "lint": "eslint --ext .js,.ts,.tsx ./src",

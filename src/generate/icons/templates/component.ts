@@ -8,7 +8,7 @@ const tsTemplate = (values: TemplateData) => `/**
  */
 import React, { forwardRef } from 'react';
 import icon from 'teenyicons/${values.type}/${values.name}';
-import { BaseIcon, BaseIcon } from './BaseIcon';
+import { BaseIcon, BaseIconProps } from '../components/BaseIcon';
 
 export const Icon${iconNameConcatWithVariant(
     fileNameToCamelCase(values.name),
