@@ -15,17 +15,32 @@ export interface BaseIconProps extends React.HTMLAttributes<HTMLSpanElement> {
     color?: string;
     stroke?: number;
     className?: string;
-    noWrap?: boolean;
 
     onClick?: (e: React.MouseEvent) => void;
 }
 
-const StyledIcon = styled.span<{ onClick?: BaseIconProps['onClick']; color?: BaseIconProps['color'] }>`
-    ${({ color }) =>
-        color &&
-        `
-        color: ${color};
-    `}
+type StyledIconProps = Pick<BaseIconProps, 'onClick' | 'color'> & {
+    children: React.ReactNode;
+
+    size?: string;
+    forwardRef?: React.Ref<HTMLSpanElement>
+}
+
+const StyledIcon = styled(
+    ({
+        forwardRef,
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        color,
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        size,
+        ...props
+    }: StyledIconProps) => <span ref={forwardRef} {...props} />,
+)`
+    width: ${({ size }) => size};
+    height: ${({ size }) => size};
+
+    color: ${({ color }) => color};
+
     ${({ onClick }) =>
         onClick &&
         `
@@ -34,17 +49,12 @@ const StyledIcon = styled.span<{ onClick?: BaseIconProps['onClick']; color?: Bas
 `;
 
 export const BaseIcon = React.forwardRef<HTMLSpanElement, BaseIconProps>(
-    ({ size, value: Component, color = 'inherit', stroke = 1, onClick, noWrap, ...props }, ref) => {
+    ({ size, value: Component, color = 'inherit', stroke = 1, ...props }, ref) => {
         const sizePx = `${typeof size === 'string' ? iconSizesMap[size] : size}px`;
-        const content = (
-            <Component width={sizePx} height={sizePx} strokeWidth={stroke} onClick={noWrap ? onClick : undefined} />
-        );
 
-        return noWrap ? (
-            content
-        ) : (
-            <StyledIcon ref={ref} style={{ lineHeight: 'initial' }} color={color} onClick={onClick} {...props}>
-                {content}
+        return (
+            <StyledIcon forwardRef={ref} color={color} size={sizePx} {...props}>
+                <Component width={sizePx} height={sizePx} strokeWidth={stroke} />
             </StyledIcon>
         );
     },
