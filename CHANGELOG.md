@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) for commit guidelines.
 
+## [2.0.0](https://github.com/taskany-inc/icons/compare/v1.1.2...v2.0.0) (2023-09-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* use square container for all icons
+
+### Bug Fixes
+
+* use square container for all icons ([7f36390](https://github.com/taskany-inc/icons/commit/7f363905be10b9adf704b7a35eab6edad2dc8e03))
+
 ## [1.1.2](https://github.com/taskany-inc/icons/compare/v1.1.1...v1.1.2) (2023-08-25)
 
 
