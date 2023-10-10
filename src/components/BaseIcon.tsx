@@ -36,8 +36,11 @@ const StyledIcon = styled(
         ...props
     }: StyledIconProps) => <span ref={forwardRef} {...props} />,
 )`
+    display: inline-block;
+
     width: ${({ size }) => size};
     height: ${({ size }) => size};
+    font-size: ${({ size }) => size};
 
     color: ${({ color }) => color};
 
