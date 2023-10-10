@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) for commit guidelines.
 
+## [2.0.1](https://github.com/taskany-inc/icons/compare/v2.0.0...v2.0.1) (2023-10-10)
+
+
+### Bug Fixes
+
+* **BaseIcon:** align svg in BaseIcon ([b07a387](https://github.com/taskany-inc/icons/commit/b07a387f3b681a487c6269feaf148c1dd4b58a86))
+
 ## [2.0.0](https://github.com/taskany-inc/icons/compare/v1.1.2...v2.0.0) (2023-09-27)
 
 
