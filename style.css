@@ -1,0 +1,7 @@
+.TaskanyIconsWrapper {
+    display: inline-block;
+}
+
+.TaskanyIconsWrapper_hover {
+    cursor: pointer;
+}
