@@ -1,5 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
+
+import '../../style.css';
 
 export const iconSizesMap = {
     xxs: 12,
@@ -19,46 +20,26 @@ export interface BaseIconProps extends React.HTMLAttributes<HTMLSpanElement> {
     onClick?: (e: React.MouseEvent) => void;
 }
 
-type StyledIconProps = Pick<BaseIconProps, 'onClick' | 'color'> & {
-    children: React.ReactNode;
-
-    size?: string;
-    forwardRef?: React.Ref<HTMLSpanElement>
-}
-
-const StyledIcon = styled(
-    ({
-        forwardRef,
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        color,
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        size,
-        ...props
-    }: StyledIconProps) => <span ref={forwardRef} {...props} />,
-)`
-    display: inline-block;
-
-    width: ${({ size }) => size};
-    height: ${({ size }) => size};
-    font-size: ${({ size }) => size};
-
-    color: ${({ color }) => color};
-
-    ${({ onClick }) =>
-        onClick &&
-        `
-            cursor: pointer;
-        `}
-`;
-
 export const BaseIcon = React.forwardRef<HTMLSpanElement, BaseIconProps>(
-    ({ size, value: Component, color = 'inherit', stroke = 1, ...props }, ref) => {
+    ({ size, value: Component, color, stroke = 1, onClick, className, ...props }, ref) => {
         const sizePx = `${typeof size === 'string' ? iconSizesMap[size] : size}px`;
+        const classes = `TaskanyIconsWrapper${onClick ? ' TaskanyIconsWrapper_hover' : ''} ${className}` as const;
 
         return (
-            <StyledIcon forwardRef={ref} color={color} size={sizePx} {...props}>
+            <span
+                ref={ref}
+                className={classes}
+                style={{
+                    fontSize: sizePx,
+                    width: sizePx,
+                    height: sizePx,
+                    color,
+                }}
+                onClick={onClick}
+                {...props}
+            >
                 <Component width={sizePx} height={sizePx} strokeWidth={stroke} />
-            </StyledIcon>
+            </span>
         );
     },
 );
