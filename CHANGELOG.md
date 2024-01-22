@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) for commit guidelines.
 
+## [2.0.4](https://github.com/taskany-inc/icons/compare/v2.0.3...v2.0.4) (2024-01-22)
+
+
+### Bug Fixes
+
+* **workflows:** comment version to pr ([babaa61](https://github.com/taskany-inc/icons/commit/babaa6197437feba5c0211798b48c78bb8b0c7dc))
+
 ## [2.0.3](https://github.com/taskany-inc/icons/compare/v2.0.2...v2.0.3) (2024-01-22)
 
 
