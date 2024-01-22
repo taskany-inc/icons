@@ -1,7 +1,5 @@
 import React from 'react';
 
-import '../../style.css';
-
 export const iconSizesMap = {
     xxs: 12,
     xs: 14,
@@ -21,9 +19,9 @@ export interface BaseIconProps extends React.HTMLAttributes<HTMLSpanElement> {
 }
 
 export const BaseIcon = React.forwardRef<HTMLSpanElement, BaseIconProps>(
-    ({ size, value: Component, color, stroke = 1, onClick, className, ...props }, ref) => {
+    ({ size, value: Component, color, stroke = 1, onClick, className = '', ...props }, ref) => {
         const sizePx = `${typeof size === 'string' ? iconSizesMap[size] : size}px`;
-        const classes = `TaskanyIconsWrapper${onClick ? ' TaskanyIconsWrapper_hover' : ''} ${className}` as const;
+        const classes = `TaskanyIconsWrapper${onClick ? ' TaskanyIconsWrapper_hover' : ''} ${className}`.trim();
 
         return (
             <span

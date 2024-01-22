@@ -9,12 +9,20 @@
     "dist",
     "style.css"
   ],
+  "exports": {
+    ".": {
+      "import": "./dist/es/index",
+      "require": "./dist/index",
+      "types": "./dist/index.d.ts"
+    },
+    "./style.css": "./style.css"
+  },
   "scripts": {
     "clean": "rm -rf ./dist",
     "cleanup": "rm -rf ./src/icons/*.ts ./src/icons/*.tsx",
     "build": "npm run clean && npm run generate:icons && npm run build:cjm && npm run build:esm && npm run build:types && npm run cleanup",
     "build:cjm": "BABEL_ENV=cjs babel ./src --out-dir ./dist --extensions .ts,.tsx --ignore ./src/generate",
-    "build:esm": "BABEL_ENV=esm babel ./src --out-dir ./dist/es --extensions .ts,.tsx --ignore ./src/generate && cp ./style.css ./dist",
+    "build:esm": "BABEL_ENV=esm babel ./src --out-dir ./dist/es --extensions .ts,.tsx --ignore ./src/generate",
     "build:types": "tsc --emitDeclarationOnly",
     "prepublishOnly": "npm run build",
     "lint": "eslint --ext .js,.ts,.tsx ./src",
