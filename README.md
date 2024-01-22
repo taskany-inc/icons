@@ -25,3 +25,4 @@ const MyComponent = () => {
 };
 ```
 
+Test canary
