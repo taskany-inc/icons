@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) for commit guidelines.
 
+## [2.0.2](https://github.com/taskany-inc/icons/compare/v2.0.1...v2.0.2) (2024-01-22)
+
+
+### Bug Fixes
+
+* ci auth problem ([9b018c9](https://github.com/taskany-inc/icons/commit/9b018c9bcd0f660cf12e20e3a00b645a69143cb8))
+
 ## [2.0.1](https://github.com/taskany-inc/icons/compare/v2.0.0...v2.0.1) (2023-10-10)
 
 
