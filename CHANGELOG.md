@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) for commit guidelines.
 
+## [2.0.3](https://github.com/taskany-inc/icons/compare/v2.0.2...v2.0.3) (2024-01-22)
+
+
+### Bug Fixes
+
+* css import ([11d64d2](https://github.com/taskany-inc/icons/commit/11d64d28470292d9900538e42556cd6f27cfdd72))
+
 ## [2.0.2](https://github.com/taskany-inc/icons/compare/v2.0.1...v2.0.2) (2024-01-22)
 
 
