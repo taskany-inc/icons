@@ -68,6 +68,6 @@ jobs:
           token: ${{ steps.auth.outputs.token }}
           issue-number: ${{ github.event.issue.number }}
           body: |
-            Canary available: `@taskany/bricks@${{ steps.canary.outputs.version }}`
+            Canary available: `@taskany/icons@${{ steps.canary.outputs.version }}`
 
 
