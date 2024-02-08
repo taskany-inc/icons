@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 
 export const iconSizesMap = {
     xxs: 12,
@@ -13,26 +13,33 @@ export interface BaseIconProps extends React.HTMLAttributes<HTMLSpanElement> {
     value: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
     color?: string;
     stroke?: number;
-    className?: string;
-
-    onClick?: (e: React.MouseEvent) => void;
 }
 
 export const BaseIcon = React.forwardRef<HTMLSpanElement, BaseIconProps>(
-    ({ size, value: Component, color, stroke = 1, onClick, className = '', ...props }, ref) => {
+    ({ size, value: Component, color, stroke = 1, onClick, className, ...props }, ref) => {
         const sizePx = `${typeof size === 'string' ? iconSizesMap[size] : size}px`;
-        const classes = `TaskanyIconsWrapper${onClick ? ' TaskanyIconsWrapper_hover' : ''} ${className}`.trim();
+        let classes = 'TaskanyIconsWrapper';
+
+        if (onClick) {
+            classes += ' TaskanyIconsWrapper_hover';
+        }
+
+        if (className) {
+            classes += ` ${className}`;
+        }
+
+        const style = useMemo<React.CSSProperties>(() => ({
+            fontSize: sizePx,
+            width: sizePx,
+            height: sizePx,
+            color,
+        }), [color, sizePx]);
 
         return (
             <span
                 ref={ref}
                 className={classes}
-                style={{
-                    fontSize: sizePx,
-                    width: sizePx,
-                    height: sizePx,
-                    color,
-                }}
+                style={style}
                 onClick={onClick}
                 {...props}
             >
