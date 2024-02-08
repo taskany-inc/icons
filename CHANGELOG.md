@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) for commit guidelines.
 
+## [2.0.5](https://github.com/taskany-inc/icons/compare/v2.0.4...v2.0.5) (2024-02-08)
+
+
+### Bug Fixes
+
+* **BaseIcon:** useMemo for styles ([e955a0c](https://github.com/taskany-inc/icons/commit/e955a0cd5cbe984653c08938c5c5837a5da5641f))
+
 ## [2.0.4](https://github.com/taskany-inc/icons/compare/v2.0.3...v2.0.4) (2024-01-22)
 
 
