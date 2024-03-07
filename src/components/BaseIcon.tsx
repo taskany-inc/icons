@@ -43,7 +43,7 @@ export const BaseIcon = React.forwardRef<HTMLSpanElement, BaseIconProps>(
                 onClick={onClick}
                 {...props}
             >
-                <Component width={sizePx} height={sizePx} strokeWidth={stroke} />
+                <Component className="TaskanyIconsInner" width={sizePx} height={sizePx} strokeWidth={stroke} />
             </span>
         );
     },
