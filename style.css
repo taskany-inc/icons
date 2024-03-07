@@ -5,3 +5,7 @@
 .TaskanyIconsWrapper_hover {
     cursor: pointer;
 }
+
+.TaskanyIconsInner {
+    vertical-align: middle;
+}
