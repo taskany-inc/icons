@@ -1,5 +1,9 @@
 .TaskanyIconsWrapper {
     display: inline-block;
+    width: 1em;
+    height: 1em;
+    font-size: var(--taskany-icons-font-size, 1em);
+    line-height: 1;
 }
 
 .TaskanyIconsWrapper_hover {
@@ -7,5 +11,5 @@
 }
 
 .TaskanyIconsInner {
-    vertical-align: middle;
+    vertical-align: -0.125em;
 }
