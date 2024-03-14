@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) for commit guidelines.
 
+## [2.0.7](https://github.com/taskany-inc/icons/compare/v2.0.6...v2.0.7) (2024-03-14)
+
+
+### Bug Fixes
+
+* align icon ([36a19d3](https://github.com/taskany-inc/icons/commit/36a19d3006db9ed69de4e126d8a8ce1ec7691365))
+
 ## [2.0.6](https://github.com/taskany-inc/icons/compare/v2.0.5...v2.0.6) (2024-03-11)
 
 
